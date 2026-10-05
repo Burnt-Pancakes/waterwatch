@@ -1,0 +1,1 @@
+CREATE POLICY "Public read waterways" ON storage.objects FOR SELECT USING (bucket_id = 'waterways');

@@ -1,0 +1,13 @@
+node_modules
+dist
+.output
+.vinxi
+pnpm-lock.yaml
+package-lock.json
+bun.lock
+routeTree.gen.ts
+
+# Lovable-generated Supabase integration files — regenerated on every Lovable
+# sync; formatting them back causes large diffs for no content change.
+src/integrations/supabase/types.ts
+src/integrations/supabase/previewAuthStorage.ts

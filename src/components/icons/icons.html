@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WaterWatch icon catalog</title>
+    <script src="https://unpkg.com/lucide@0.575.0"></script>
+    <style>
+      :root {
+        --bg: #f4f7f6;
+        --card: #ffffff;
+        --ink: #1a2a28;
+        --muted: #5c6f6c;
+        --line: #d7e3e0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--bg);
+        font:
+          15px/1.45 ui-sans-serif,
+          system-ui,
+          -apple-system,
+          sans-serif;
+      }
+
+      header {
+        padding: 2rem 1.5rem 1.25rem;
+        border-bottom: 1px solid var(--line);
+        background: var(--card);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      main {
+        display: grid;
+        gap: 1.25rem;
+        padding: 1.5rem;
+      }
+
+      section {
+        padding: 1rem 1.1rem 1.15rem;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--card);
+      }
+
+      h2 {
+        margin: 0 0 0.85rem;
+        font-size: 1.05rem;
+        font-weight: 600;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
+        gap: 0.6rem;
+      }
+
+      .icon-card {
+        display: flex;
+        gap: 0.7rem;
+        align-items: center;
+        min-height: 3.4rem;
+        padding: 0.55rem 0.7rem;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--card);
+      }
+
+      .glyph {
+        display: grid;
+        width: 2rem;
+        height: 2rem;
+        flex: 0 0 auto;
+        place-items: center;
+      }
+
+      .glyph svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      .name {
+        font-weight: 650;
+        font-size: 0.92rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>WaterWatch icons</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>App → Main menu</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="map-pin"></i></div>
+            <div class="name">MapHome</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="waves"></i></div>
+            <div class="name">Rivers</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="route"></i></div>
+            <div class="name">Plan</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="anchor"></i></div>
+            <div class="name">Tides</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Map screen → Site types</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="grid-3x3"></i></div>
+            <div class="name">All</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="sailboat"></i></div>
+            <div class="name">Kayak</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="ship"></i></div>
+            <div class="name">BoatRamp</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="umbrella"></i></div>
+            <div class="name">Beach</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="waves"></i></div>
+            <div class="name">SwimArea</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="fish"></i></div>
+            <div class="name">Fishing</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="anchor"></i></div>
+            <div class="name">Marina</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Map screen → Map style</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="map"></i></div>
+            <div class="name">Map</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="moon"></i></div>
+            <div class="name">Moon</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="satellite"></i></div>
+            <div class="name">Satellite</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Map screen → Map style control</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="layers"></i></div>
+            <div class="name">Layers</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="chevron-down"></i></div>
+            <div class="name">ChevronDown</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="check"></i></div>
+            <div class="name">Check</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Map screen → Zoom and locate</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="plus"></i></div>
+            <div class="name">Plus</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="minus"></i></div>
+            <div class="name">Minus</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="crosshair"></i></div>
+            <div class="name">Crosshair</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="undo"></i></div>
+            <div class="name">Undo</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Map screen → Search</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="search"></i></div>
+            <div class="name">Search</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="loader-circle"></i></div>
+            <div class="name">Loader2</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="star"></i></div>
+            <div class="name">Star</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="x"></i></div>
+            <div class="name">X</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="map-pin"></i></div>
+            <div class="name">MapPin</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="anchor"></i></div>
+            <div class="name">Anchor</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Map screen → Site type filter</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="sliders-horizontal"></i></div>
+            <div class="name">SlidersHorizontal</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="chevron-down"></i></div>
+            <div class="name">ChevronDown</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="check"></i></div>
+            <div class="name">Check</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Map screen → Sea nettles</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M4 12a8 8 0 0 1 16 0" />
+                <path d="M4 12h16" />
+                <path d="M8 12c0 2.5-1.5 3.5-1.5 5.5" />
+                <path d="M12 12c0 3 1 4 1 6.5" />
+                <path d="M16 12c0 2.5 1.5 3.5 1.5 5.5" />
+              </svg>
+            </div>
+            <div class="name">Jellyfish</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Map screen → Account menu</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="user-round"></i></div>
+            <div class="name">UserRound</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="heart"></i></div>
+            <div class="name">Heart</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="map-pin"></i></div>
+            <div class="name">MapPin</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="bell"></i></div>
+            <div class="name">Bell</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="log-out"></i></div>
+            <div class="name">LogOut</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Sign in</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="log-in"></i></div>
+            <div class="name">LogIn</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="mail"></i></div>
+            <div class="name">Mail</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="user-plus"></i></div>
+            <div class="name">UserPlus</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="key-round"></i></div>
+            <div class="name">KeyRound</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="send"></i></div>
+            <div class="name">Send</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="arrow-left"></i></div>
+            <div class="name">ArrowLeft</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Site details → Status</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="check-circle"></i></div>
+            <div class="name">Pass</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="triangle-alert"></i></div>
+            <div class="name">Warning</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="circle-x"></i></div>
+            <div class="name">Fail</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="circle-help"></i></div>
+            <div class="name">NoData</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Map screen → Site details</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="clock"></i></div>
+            <div class="name">Clock</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="cloud-rain"></i></div>
+            <div class="name">CloudRain</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="star"></i></div>
+            <div class="name">Star</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="bell"></i></div>
+            <div class="name">Bell</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="share-2"></i></div>
+            <div class="name">Share2</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="navigation"></i></div>
+            <div class="name">Navigation</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="pencil"></i></div>
+            <div class="name">Pencil</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="trash-2"></i></div>
+            <div class="name">Trash2</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="x"></i></div>
+            <div class="name">X</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="map-pin"></i></div>
+            <div class="name">MapPin</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="sailboat"></i></div>
+            <div class="name">Sailboat</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="fish"></i></div>
+            <div class="name">Fish</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="waves"></i></div>
+            <div class="name">Waves</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Site details → Weather</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="cloud"></i></div>
+            <div class="name">Cloud</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="cloud-rain"></i></div>
+            <div class="name">CloudRain</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="wind"></i></div>
+            <div class="name">Wind</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="triangle-alert"></i></div>
+            <div class="name">AlertTriangle</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Site details → River stage</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="droplet"></i></div>
+            <div class="name">Droplet</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Site details → Tides</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="arrow-up-right"></i></div>
+            <div class="name">ArrowUpRight</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="arrow-down-right"></i></div>
+            <div class="name">ArrowDownRight</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="arrow-up"></i></div>
+            <div class="name">ArrowUp</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="arrow-down"></i></div>
+            <div class="name">ArrowDown</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="waves"></i></div>
+            <div class="name">Waves</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Site details → Temperature</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="thermometer"></i></div>
+            <div class="name">Thermometer</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="info"></i></div>
+            <div class="name">Info</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Site details → Ask WaterWatch AI</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="waves"></i></div>
+            <div class="name">Waves</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="sailboat"></i></div>
+            <div class="name">Sailboat</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="person-standing"></i></div>
+            <div class="name">PersonStanding</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="fish"></i></div>
+            <div class="name">Fish</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Plan screen</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="leaf"></i></div>
+            <div class="name">Leaf</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="loader-circle"></i></div>
+            <div class="name">LoaderCircle</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="plus"></i></div>
+            <div class="name">Plus</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="triangle-alert"></i></div>
+            <div class="name">TriangleAlert</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="clock"></i></div>
+            <div class="name">Clock</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="arrow-down"></i></div>
+            <div class="name">ArrowDown</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="route"></i></div>
+            <div class="name">Route</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="x"></i></div>
+            <div class="name">X</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Favorites and alerts</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="star"></i></div>
+            <div class="name">Star</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="bell"></i></div>
+            <div class="name">Bell</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="bell-off"></i></div>
+            <div class="name">BellOff</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="trash-2"></i></div>
+            <div class="name">Trash2</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="check-circle"></i></div>
+            <div class="name">CheckCircle</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Map screen → About</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="info"></i></div>
+            <div class="name">Info</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="activity"></i></div>
+            <div class="name">Activity</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="check-circle"></i></div>
+            <div class="name">CheckCircle</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="map-pin"></i></div>
+            <div class="name">MapPin</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Map screen → Focus group</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="message-circle"></i></div>
+            <div class="name">MessageCircle</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="x"></i></div>
+            <div class="name">X</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Map screen → My spots</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="map-pin"></i></div>
+            <div class="name">MapPin</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="plus"></i></div>
+            <div class="name">Plus</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="trash-2"></i></div>
+            <div class="name">Trash2</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="x"></i></div>
+            <div class="name">X</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Site page and Rivers</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="arrow-left"></i></div>
+            <div class="name">ArrowLeft</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="arrow-right"></i></div>
+            <div class="name">ArrowRight</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="navigation"></i></div>
+            <div class="name">Navigation</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="share-2"></i></div>
+            <div class="name">Share2</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="search"></i></div>
+            <div class="name">Search</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="x"></i></div>
+            <div class="name">X</div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Shared controls</h2>
+        <div class="grid">
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="chevron-down"></i></div>
+            <div class="name">ChevronDown</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="chevron-up"></i></div>
+            <div class="name">ChevronUp</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="chevron-left"></i></div>
+            <div class="name">ChevronLeft</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="chevron-right"></i></div>
+            <div class="name">ChevronRight</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="circle"></i></div>
+            <div class="name">Circle</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="ellipsis"></i></div>
+            <div class="name">MoreHorizontal</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="grip-vertical"></i></div>
+            <div class="name">GripVertical</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="panel-left"></i></div>
+            <div class="name">PanelLeft</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="grid-3x3"></i></div>
+            <div class="name">Grid3X3</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="ship"></i></div>
+            <div class="name">Ship</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="umbrella"></i></div>
+            <div class="name">Umbrella</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="check-circle"></i></div>
+            <div class="name">CheckCircle</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="circle-x"></i></div>
+            <div class="name">XCircle</div>
+          </article>
+          <article class="icon-card">
+            <div class="glyph"><i data-lucide="circle-help"></i></div>
+            <div class="name">HelpCircle</div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      lucide.createIcons({ attrs: { "stroke-width": 2, width: 22, height: 22 } });
+    </script>
+  </body>
+</html>

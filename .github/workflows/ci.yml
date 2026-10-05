@@ -1,0 +1,161 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+env:
+  NODE_VERSION: "24"
+
+# ── Jobs ──────────────────────────────────────────────────────────────────────
+
+jobs:
+  # ─── 1. Static checks & production build ───────────────────────────────────
+  lint:
+    name: Static checks & production build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Auto-fix Prettier formatting
+        run: npx prettier --write "src/**/*.{ts,tsx}" "supabase/**/*.ts"
+
+      - name: Check for remaining lint issues
+        run: |
+          git diff --exit-code || (
+            echo "Prettier made changes — committing" &&
+            git config user.email "ci@watervoicedmv.org" &&
+            git config user.name "CI Bot" &&
+            git add -A &&
+            git commit -m "ci: auto-fix Prettier formatting"
+          )
+
+      - name: ESLint
+        run: npm run lint
+
+      - name: TypeScript type-check
+        run: npm run type-check
+
+      - name: Production build
+        run: npm run build
+
+  # ─── 2. Unit tests & coverage (parallel with lint) ─────────────────────────
+  unit-tests:
+    name: Unit tests & coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Vitest with coverage
+        # npm run test already includes --coverage via package.json.
+        # Vitest enforces the 90% thresholds declared in vitest.config.ts and
+        # exits non-zero if any threshold is missed.
+        run: npm test
+        env:
+          # These values support unit tests that validate client configuration.
+          # Live DB-integration tests require RUN_DB_INTEGRATION_TESTS=true and
+          # therefore never touch production during the ordinary PR suite.
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          VITE_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+
+      - name: Verify bundled scenic routing release
+        run: npm run test:routing-golden
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/
+          retention-days: 7
+
+  # ─── 3. E2E tests — runs after lint + unit-tests pass ──────────────────────
+  e2e-tests:
+    name: E2E tests (Playwright)
+    runs-on: ubuntu-latest
+    needs: [lint, unit-tests]
+    # PRs exercise the exact branch with a local server before Lovable publish.
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run scenic-routing Playwright journeys against the branch
+        run: npx playwright test e2e/plan-routing.spec.ts
+        env:
+          PLAYWRIGHT_START_SERVER: "true"
+          PLAYWRIGHT_BASE_URL: http://127.0.0.1:8080
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_PUBLISHABLE_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          VITE_SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          VITE_SUPABASE_PUBLISHABLE_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+          # Needed by auth.spec.ts for the authenticated sign-in tests.
+          E2E_TEST_EMAIL: ${{ secrets.E2E_TEST_EMAIL }}
+          E2E_TEST_PASSWORD: ${{ secrets.E2E_TEST_PASSWORD }}
+          # Public browser scenarios only need the anon grants. Fall back to
+          # the anon key when CI intentionally has no privileged service key.
+          # Lovable production still supplies the real server-only key.
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY || secrets.SUPABASE_ANON_KEY }}
+
+      - name: Upload Playwright report (on failure)
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7
+
+  # ─── 4. Post coverage summary as PR comment ────────────────────────────────
+  coverage-comment:
+    name: Coverage PR comment
+    runs-on: ubuntu-latest
+    needs: unit-tests
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Download coverage artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage/
+
+      - name: Post Vitest coverage summary
+        uses: davelosert/vitest-coverage-report-action@v2
+        with:
+          json-summary-path: coverage/coverage-summary.json
+          json-final-path: coverage/coverage-final.json
+          # Link the detailed HTML report from the artifact.
+          name: Unit test coverage

@@ -1,0 +1,8 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.openfreemap.org https://*.openstreetmap.org https://*.tile.openstreetmap.org https://tile.openstreetmap.org https://basemaps.cartocdn.com https://server.arcgisonline.com; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://tiles.openfreemap.org https://tile.openstreetmap.org https://basemaps.cartocdn.com https://api.anthropic.com https://api.resend.com https://api.weather.gov https://overpass-api.de https://www.waterqualitydata.us https://maps2.dcgis.dc.gov https://geodata.md.gov https://services.arcgis.com https://server.arcgisonline.com https://waterservices.usgs.gov; font-src 'self'; frame-ancestors 'none'
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/routing-v2/*
+  Cache-Control: public, max-age=31536000, immutable

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "four-mile-run-to-potomac",
+    "category": "tributary_to_river",
+    "expected": "route",
+    "waypoints": [
+      { "name": "Four Mile Run Kayak Launch (ADA)", "lng": -77.05552, "lat": 38.84044 },
+      { "name": "Washington Sailing Marina", "lng": -77.041684, "lat": 38.833209 }
+    ]
+  },
+  {
+    "id": "key-bridge-around-roosevelt-island",
+    "category": "island_alternatives",
+    "expected": "route",
+    "waypoints": [
+      { "name": "Key Bridge Boathouse", "lng": -77.06969, "lat": 38.90416 },
+      { "name": "Gravelly Point Boat Ramp", "lng": -77.04108, "lat": 38.863958 }
+    ]
+  },
+  {
+    "id": "anacostia-branch-to-bladensburg",
+    "category": "branches",
+    "expected": "route",
+    "waypoints": [
+      { "name": "Anacostia Park Boat Ramp", "lng": -76.970445, "lat": 38.879743 },
+      { "name": "Bladensburg Waterfront Park", "lng": -76.939375, "lat": 38.937796 }
+    ]
+  },
+  {
+    "id": "belle-haven-wide-potomac",
+    "category": "wide_water_scenic",
+    "expected": "route",
+    "waypoints": [
+      { "name": "Belle Haven Marina", "lng": -77.049178, "lat": 38.778453 },
+      { "name": "Gravelly Point Boat Ramp", "lng": -77.04108, "lat": 38.863958 }
+    ]
+  },
+  {
+    "id": "great-falls-no-portage",
+    "category": "impossible_all_water",
+    "expected": "unavailable",
+    "waypoints": [
+      { "name": "River Bend Park Boat Ramp", "lng": -77.245606, "lat": 39.018236 },
+      { "name": "Key Bridge Boathouse", "lng": -77.06969, "lat": 38.90416 }
+    ]
+  }
+]

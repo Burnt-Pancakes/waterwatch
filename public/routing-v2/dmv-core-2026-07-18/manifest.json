@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "dataVersion": "dmv-core-2026-07-18",
+  "generatedAt": "2026-07-19T02:15:31.509Z",
+  "source": "OpenStreetMap / Overpass snapshot",
+  "attribution": "© OpenStreetMap contributors",
+  "cellSizeDegrees": 0.25,
+  "shards": [
+    {
+      "id": "409-514",
+      "path": "shards/409-514.json",
+      "bbox": [
+        -77.75,
+        38.5,
+        -77.5,
+        38.75
+      ],
+      "nodeCount": 1238,
+      "edgeCount": 2472,
+      "polygonCount": 0,
+      "constraintCount": 2
+    },
+    {
+      "id": "409-515",
+      "path": "shards/409-515.json",
+      "bbox": [
+        -77.75,
+        38.75,
+        -77.5,
+        39
+      ],
+      "nodeCount": 199,
+      "edgeCount": 396,
+      "polygonCount": 0,
+      "constraintCount": 3
+    },
+    {
+      "id": "409-516",
+      "path": "shards/409-516.json",
+      "bbox": [
+        -77.75,
+        39,
+        -77.5,
+        39.25
+      ],
+      "nodeCount": 756,
+      "edgeCount": 2778,
+      "polygonCount": 2,
+      "constraintCount": 5
+    },
+    {
+      "id": "410-514",
+      "path": "shards/410-514.json",
+      "bbox": [
+        -77.5,
+        38.5,
+        -77.25,
+        38.75
+      ],
+      "nodeCount": 2523,
+      "edgeCount": 8434,
+      "polygonCount": 12,
+      "constraintCount": 473
+    },
+    {
+      "id": "410-515",
+      "path": "shards/410-515.json",
+      "bbox": [
+        -77.5,
+        38.75,
+        -77.25,
+        39
+      ],
+      "nodeCount": 2046,
+      "edgeCount": 5138,
+      "polygonCount": 20,
+      "constraintCount": 1541
+    },
+    {
+      "id": "410-516",
+      "path": "shards/410-516.json",
+      "bbox": [
+        -77.5,
+        39,
+        -77.25,
+        39.25
+      ],
+      "nodeCount": 6574,
+      "edgeCount": 21366,
+      "polygonCount": 8,
+      "constraintCount": 495
+    },
+    {
+      "id": "411-514",
+      "path": "shards/411-514.json",
+      "bbox": [
+        -77.25,
+        38.5,
+        -77,
+        38.75
+      ],
+      "nodeCount": 8501,
+      "edgeCount": 41020,
+      "polygonCount": 14,
+      "constraintCount": 275
+    },
+    {
+      "id": "411-515",
+      "path": "shards/411-515.json",
+      "bbox": [
+        -77.25,
+        38.75,
+        -77,
+        39
+      ],
+      "nodeCount": 9583,
+      "edgeCount": 40712,
+      "polygonCount": 30,
+      "constraintCount": 1208
+    },
+    {
+      "id": "411-516",
+      "path": "shards/411-516.json",
+      "bbox": [
+        -77.25,
+        39,
+        -77,
+        39.25
+      ],
+      "nodeCount": 1185,
+      "edgeCount": 3148,
+      "polygonCount": 8,
+      "constraintCount": 532
+    },
+    {
+      "id": "412-514",
+      "path": "shards/412-514.json",
+      "bbox": [
+        -77,
+        38.5,
+        -76.75,
+        38.75
+      ],
+      "nodeCount": 21,
+      "edgeCount": 48,
+      "polygonCount": 3,
+      "constraintCount": 98
+    },
+    {
+      "id": "412-515",
+      "path": "shards/412-515.json",
+      "bbox": [
+        -77,
+        38.75,
+        -76.75,
+        39
+      ],
+      "nodeCount": 1534,
+      "edgeCount": 3898,
+      "polygonCount": 11,
+      "constraintCount": 391
+    },
+    {
+      "id": "412-516",
+      "path": "shards/412-516.json",
+      "bbox": [
+        -77,
+        39,
+        -76.75,
+        39.25
+      ],
+      "nodeCount": 5054,
+      "edgeCount": 11398,
+      "polygonCount": 7,
+      "constraintCount": 279
+    },
+    {
+      "id": "413-514",
+      "path": "shards/413-514.json",
+      "bbox": [
+        -76.75,
+        38.5,
+        -76.5,
+        38.75
+      ],
+      "nodeCount": 1849,
+      "edgeCount": 8648,
+      "polygonCount": 4,
+      "constraintCount": 9
+    },
+    {
+      "id": "413-515",
+      "path": "shards/413-515.json",
+      "bbox": [
+        -76.75,
+        38.75,
+        -76.5,
+        39
+      ],
+      "nodeCount": 2012,
+      "edgeCount": 6622,
+      "polygonCount": 9,
+      "constraintCount": 106
+    },
+    {
+      "id": "413-516",
+      "path": "shards/413-516.json",
+      "bbox": [
+        -76.75,
+        39,
+        -76.5,
+        39.25
+      ],
+      "nodeCount": 505,
+      "edgeCount": 1030,
+      "polygonCount": 2,
+      "constraintCount": 137
+    }
+  ]
+}

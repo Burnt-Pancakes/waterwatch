@@ -1,0 +1,17 @@
+# Normalise line endings to LF in the repository and on checkout.
+# This prevents CRLF creeping in from Windows checkouts.
+* text=auto eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.jsx text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+
+# Lovable regenerates this file on every sync — mark as generated so GitHub
+# collapses it in diffs and language stats exclude it.
+src/integrations/supabase/types.ts linguist-generated=true

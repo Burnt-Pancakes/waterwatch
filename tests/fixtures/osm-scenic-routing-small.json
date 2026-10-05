@@ -1,0 +1,19 @@
+{
+  "elements": [
+    {
+      "type": "way",
+      "id": 100,
+      "nodes": [1, 2, 3],
+      "geometry": [
+        { "lon": -77.055, "lat": 38.84 },
+        { "lon": -77.054, "lat": 38.845 },
+        { "lon": -77.053, "lat": 38.85 }
+      ],
+      "tags": {
+        "waterway": "river",
+        "name": "Fixture River",
+        "canoe": "yes"
+      }
+    }
+  ]
+}
